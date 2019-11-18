@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import {AuthServiceService} from '../services/auth-service.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +9,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  message: string;
+
+  constructor(public authService: AuthServiceService, private router: Router) { }
 
   ngOnInit() {
   }
+
+  login(email: string, password: string): boolean { 
+    this.message = '';
+    this.authService.login(email, password);
+
+    if (!this.authService.isLoggined()) {
+      console.log('can not sign in!');
+
+      this.message = 'Incorrect credentials.'; 
+      setTimeout(function() {
+        this.message = ''; 
+      }.bind(this), 2500);
+    }else{
+      console.log("You are in!");
+      this.message = 'Congraduations!';
+      //this.router.navigate(['/business-cards']);
+    }
+    return false; 
+  }
+
+
 
 }

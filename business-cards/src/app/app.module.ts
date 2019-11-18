@@ -21,7 +21,7 @@ import {AngularFirestore} from '@angular/fire/firestore';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFireAuth } from "@angular/fire/auth";
+import {AuthGuardGuard} from './auth-guard.guard';
 
 @NgModule({
   declarations: [
@@ -39,14 +39,15 @@ import { AngularFireAuth } from "@angular/fire/auth";
     AngularFireAuthModule,
     AngularFireModule,
     AngularFireStorageModule,
-    AngularFireAuth,
-    FormsModule
+    FormsModule,
+    AngularFirestoreModule
   ],
   providers: [
     AuthServiceService,
     BusinessCardService,
     SearchService,
-    AngularFirestore
+    AngularFirestore,
+    AuthGuardGuard
   ],
   bootstrap: [AppComponent]
 })
