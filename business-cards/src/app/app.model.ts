@@ -1,4 +1,4 @@
-export class BusinessCard{
+export interface Card{
 
     firstName:string;
     lastName:string;
@@ -6,8 +6,8 @@ export class BusinessCard{
     Email:string;
     extraText:string;
     imageUri:string;
-
-    constructor(firstName:string, lastName:string, phoneNumber:string, Email:string, imageUri:string, extraText?:string){
+/* 
+    constructor(firstName:string, lastName:string, phoneNumber:string, Email:string, imageUri?:string, extraText?:string){
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
@@ -15,4 +15,6 @@ export class BusinessCard{
         this.extraText = extraText;
         this.imageUri = imageUri;
     }
+
+*/
 }
