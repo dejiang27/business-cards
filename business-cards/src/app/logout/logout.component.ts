@@ -13,8 +13,6 @@ export class LogoutComponent implements OnInit {
   ngOnInit() {
   }
 
-
-
   logout(): boolean { 
     this.authService.logout(); 
     console.log("You are not logginged anymore!");

@@ -7,7 +7,6 @@ import { Observable } from 'rxjs';
 
 export class AuthServiceService {
 
-
   constructor(private angularFireAuth: AngularFireAuth){
   }
 

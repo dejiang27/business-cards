@@ -22,6 +22,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import {AuthGuardGuard} from './auth-guard.guard';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { UserInforComponent } from './user-infor/user-infor.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import {AuthGuardGuard} from './auth-guard.guard';
     BusinessCardComponent,
     NotFoundComponent,
     BusinessCardsComponent,
-    LogoutComponent
+    LogoutComponent,
+    NavBarComponent,
+    UserInforComponent
   ],
   imports: [
     BrowserModule,
