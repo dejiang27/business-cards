@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-
+import {Router} from '@angular/router';
 import { AngularFireAuth } from "@angular/fire/auth";
 import { Observable } from 'rxjs';
 
@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
 
 export class AuthServiceService {
 
-  constructor(private angularFireAuth: AngularFireAuth){
+  errs:string;
+  constructor(private angularFireAuth: AngularFireAuth, private router: Router){
   }
 
   login(email: string, password: string) {
@@ -16,17 +17,20 @@ export class AuthServiceService {
       .signInWithEmailAndPassword(email, password)
       .then(res => {
         console.log('Successfully signed in!');
+        this.router.navigate(['/business-cards']);
       })
       .catch(err => {
-        console.log('Something is wrong:',err.message);
+        this.errs = err.message;
+        console.log('Something is wrong:',this.errs);
       });
   }
 
   logout(){
     this.angularFireAuth.auth.signOut();
+    this.router.navigate(['/']);
   }
   
-  isLoggined(): boolean{
+  isLoggedIn(): boolean{
     return this.angularFireAuth.auth.currentUser !== null;
   }
 
