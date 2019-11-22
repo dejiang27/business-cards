@@ -1,1 +1,22 @@
-<p>business-card works!</p>
+<div class="card" style="width: 25rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{ businessCard.firstName }} {{businessCard.lastName}}</h5>
+        <div class="card-text">
+            <div> Email: {{businessCard.Email}}</div>
+            <div> Phone Number: {{businessCard.phoneNumber}}</div>
+            <div> Extra Text: {{businessCard.extraText}}</div>
+            <a href="" class="btn btn-primary">Destory Card</a>
+            <a href="" class="btn btn-primary">Edit Card</a>
+        </div>
+    </div>
+</div>
+
+
+<!--
+firstName:string;
+lastName:string;
+phoneNumber:string;
+Email:string;
+extraText:string;
+imageUri:string;
+-->
