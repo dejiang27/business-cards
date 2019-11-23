@@ -34,4 +34,16 @@ export class AuthServiceService {
     return this.angularFireAuth.auth.currentUser !== null;
   }
 
+  register(email: string, password: string){
+    this.angularFireAuth.auth.createUserWithEmailAndPassword(email, password)
+    .then(res =>{
+      console.log(res);
+      console.log('Successfully signed up');
+
+    }, err =>{
+      console.log(err);
+      console.log('Something is wrong: ' + err);
+    })
+
+  }
 }

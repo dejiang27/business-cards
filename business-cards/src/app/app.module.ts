@@ -24,6 +24,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import {AuthGuardGuard} from './auth-guard.guard';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { UserInforComponent } from './user-infor/user-infor.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { UserInforComponent } from './user-infor/user-infor.component';
     BusinessCardsComponent,
     LogoutComponent,
     NavBarComponent,
-    UserInforComponent
+    UserInforComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
