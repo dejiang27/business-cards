@@ -21,7 +21,7 @@
                 <input type="submit" class="btnSubmit" (click)="login(email.value, password.value)" value="Login"/>
             </div>
             <div class="form-group">
-                <a class="Don't have a account?" value="Login" [routerLink]="['/register']">Forget Password?</a>
+                <a class="btn btn-light" value="Login" [routerLink]="['/register']">Don't have an account?</a>
                 <br/>
                 <a *ngIf="this.authService.errs != null" style="color:red; font-size: 25px;font-weight: bold;">
                     Error: {{this.authService.errs}}

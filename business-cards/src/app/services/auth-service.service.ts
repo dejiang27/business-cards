@@ -26,8 +26,14 @@ export class AuthServiceService {
   }
 
   logout(){
-    this.angularFireAuth.auth.signOut();
-    this.router.navigate(['/']);
+    if(this.isLoggedIn()){
+      this.angularFireAuth.auth.signOut();
+      this.router.navigate(['/']);
+    }else{
+      console.log("No user logged in");
+
+    }
+    
   }
   
   isLoggedIn(): boolean{
@@ -35,15 +41,27 @@ export class AuthServiceService {
   }
 
   register(email: string, password: string){
-    this.angularFireAuth.auth.createUserWithEmailAndPassword(email, password)
+    this.angularFireAuth
+    .auth.
+    createUserWithEmailAndPassword(email, password)
     .then(res =>{
       console.log(res);
       console.log('Successfully signed up');
+      this.router.navigate(['/login']);
 
     }, err =>{
       console.log(err);
       console.log('Something is wrong: ' + err);
     })
+  }
 
+  getCurrentUser(){
+    if(this.isLoggedIn()){
+      var user = this.angularFireAuth.auth.currentUser;
+      return user.email;
+    }else{
+      console.log("No user logged in");
+
+    }
   }
 }

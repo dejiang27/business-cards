@@ -1,4 +1,7 @@
-<form class="container">
+
+<!--Register page version 1.0 -->
+<!--
+<form class="container" style="background-color: #5bc0de;">
     <label>
       <p class="label-txt">ENTER YOUR EMAIL</p>
       <input type="text" class="input" #email>
@@ -15,3 +18,39 @@
     </label>
     <button type="submit" (click)="doRegister(email.value, password.value)" >submit</button>
   </form>
+
+  -->
+
+  
+  <!--Register page version 1.1 -->
+  <!-- I found this registration form from: https://bootsnipp.com/snippets/GaEOX -->
+  <div class="container register-form">
+    <div class="form">
+        <div class="note">
+            <p>Register</p>
+        </div>
+
+        <div class="form-content">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Email address *" value="" #email/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Password *" value="" #password/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Confirm Password *" value=""#cpassword/>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btnSubmit" (click)="doRegister(email.value, password.value, cpassword.value)" >Submit</button>
+
+            <a *ngIf="errs != null" style="color:red; font-size: 25px;font-weight: bold;">
+                Error: {{errs}}
+            </a>
+        </div>
+    </div>
+</div>
