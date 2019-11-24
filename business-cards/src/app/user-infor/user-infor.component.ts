@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import {AuthServiceService} from '../services/auth-service.service';
+
 @Component({
   selector: 'app-user-infor',
   templateUrl: './user-infor.component.html',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserInforComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authServiceService: AuthServiceService) { }
 
   ngOnInit() {
   }
+
+
+  
+
 
 }

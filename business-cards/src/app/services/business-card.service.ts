@@ -14,15 +14,29 @@ import {Card} from '../app.model';
 
 export class BusinessCardService {
 
-  cards: AngularFirestoreCollection<Card>;
+  //cards: AngularFirestoreCollection<Card>;
   private cardDoc: AngularFirestoreDocument<Card>;
   
+  cards;
+
   constructor(private db: AngularFirestore) {
-    this.cards = db.collection<Card>(config.collection_endpoint);
+    //this.cards = db.collection<Card>(config.collection_endpoint);
+    this.cards = this.db.collection('cards').valueChanges();
    }
 
-   createCard(card){
-     this.cards.add(card);
+   getCards(){
+     return this.cards;
+   }
+
+   addCards(card: Card){
+     this.db.collection('cards').add({
+       firstName: card.firstName,
+       lastname: card.lastName,
+       phoneNumber: card.phoneNumber,
+       Email: card.Email,
+       extraText: card.extraText,
+       imageUri: card.imageUri
+     });
    }
 
 

@@ -25,6 +25,7 @@ import {AuthGuardGuard} from './auth-guard.guard';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { UserInforComponent } from './user-infor/user-infor.component';
 import { RegisterComponent } from './register/register.component';
+import { NewBusinessCardComponent } from './new-business-card/new-business-card.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { RegisterComponent } from './register/register.component';
     LogoutComponent,
     NavBarComponent,
     UserInforComponent,
-    RegisterComponent
+    RegisterComponent,
+    NewBusinessCardComponent
   ],
   imports: [
     BrowserModule,

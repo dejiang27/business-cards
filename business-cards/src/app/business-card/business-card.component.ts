@@ -10,7 +10,7 @@ import {BusinessCardService} from '../services/business-card.service';
 })
 export class BusinessCardComponent implements OnInit {
 
-  @Input() businessCard: Card;
+  @Input() card: Card;
 
   constructor(private businesscCardService:BusinessCardService ) { 
     this.businesscCardService = businesscCardService;
