@@ -16,20 +16,14 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  login(email: string, password: string): boolean { 
-    //this.message = '';
+  login(email: string, password: string): boolean {
+     
     this.authService.login(email, password);
 
     if (this.authService.isLoggedIn()) {
       console.log('can not sign in!');
-
-      //this.message = 'Incorrect credentials.'; 
-      //setTimeout(function() {
-      //  this.message = ''; 
-      //}.bind(this), 2500);
     }else{
       console.log("You are in!");
-      //this.message = 'Congraduations!';
     }
     return false; 
   }

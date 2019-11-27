@@ -1,1 +1,44 @@
-<p>new-business-card works!</p>
+<form class="container">
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">First Name</span>
+        </div>
+        <input type="text" class="form-control" placeholder="firstName" aria-label="firstName" aria-describedby="basic-addon1" value="" required #firstName>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Last Name</span>
+        </div>
+        <input type="text" class="form-control" placeholder="lastName" aria-label="lastName" aria-describedby="basic-addon1" value="" required #lastName>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Email</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" value="" required #Email>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Phone Number</span>
+        </div>
+        <input type="text" class="form-control" placeholder="phoneNumber" aria-label="phoneNumber" aria-describedby="basic-addon1" value="" required #phoneNumber>
+    </div>
+
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Extra Text</span>
+        </div>
+        <textarea class="form-control" aria-label="extraText" value="" #extraText></textarea>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="addCard(firstName, lastName, Email, phoneNumber, extraText)">
+        Save New Card
+    </button>
+
+    <div *ngIf="message" style="color:red; align-content: center; font-size:20px;"> Error: {{message}} </div>
+        
+</form>

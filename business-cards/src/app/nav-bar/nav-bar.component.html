@@ -8,11 +8,19 @@
     </div>
     
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" #search>
+      <button class="btn btn-success my-2 my-sm-0" type="button" (click)="searchCard(search)">Search</button>
     </form>
 
     <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <button type="button" class="btn btn-info" [routerLink]="['/business-cards']" >
+          <img src="assets/icon-homepage.png" alt="image" height="20" width="20">
+            home
+        </button>
+      </li>
+      &nbsp;
+      &nbsp;
       <li class="nav-item">
         <button type="button" class="btn btn-info" [routerLink]="['/user']" >
           <img src="assets/icon-profile.png" alt="image" height="20" width="20">

@@ -1,22 +1,18 @@
-<div class="card" style="width: 25rem;">
+<div class="card mx-auto" style="width: 25rem; text-align:center;">
     <div class="card-body">
-        <h5 class="card-title">{{ card.firstName }} ,{{card.lastName}}</h5>
+        <h5 class="card-title">{{ card.firstName }}  {{card.lastName}}</h5>
         <div class="card-text">
-            <div> Email: {{card.Email}}</div>
+            <div class="item"> Email: {{card.Email}}</div>
             <div> Phone Number: {{card.phoneNumber}}</div>
             <div> Extra Text: {{card.extraText}}</div>
-            <a href="" class="btn btn-primary">Destory Card</a>
-            <a href="" class="btn btn-primary">Edit Card</a>
+            <img src='{{card.imageUri}}' *ngIf="imageUri" style="height: 80%;width: 80%;">
+            <a class="btn btn-primary" (click)="destroyCard(card.phoneNumber)">Destory Card</a>
+            
+            &nbsp;
+
+            <app-update-business-card [phone]="phone" [first]="first" [last]="last" [mail]="mail" [extra]="extra"></app-update-business-card>
+
         </div>
     </div>
 </div>
 
-
-<!--
-firstName:string;
-lastName:string;
-phoneNumber:string;
-Email:string;
-extraText:string;
-imageUri:string;
--->

@@ -15,7 +15,7 @@ export class BusinessCardsComponent implements OnInit {
 
   cards;
   constructor(private authServiceService: AuthServiceService, private router:Router, private businessCardService: BusinessCardService) { 
-    this.cards = businessCardService.getCards();
+    this.cards = this.businessCardService.getCards();
   }
 
   ngOnInit() {

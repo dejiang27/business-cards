@@ -1,0 +1,11 @@
+<app-nav-bar></app-nav-bar>
+
+<div>
+    <div *ngFor="let card of getCards()">
+            <app-business-card [card]="card">
+            </app-business-card>
+    
+            <br>
+    
+    </div>
+</div>

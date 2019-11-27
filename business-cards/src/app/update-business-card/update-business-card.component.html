@@ -1,0 +1,19 @@
+
+<button class="btn btn-success" (click)="myFunction()">Update Card</button>
+<div *ngIf="show()">
+    <input type="text" [(ngModel)]="first" name="first" class="form-control" value='{{first}}' #firsts>
+        
+    <input type="text" class="form-control" placeholder="last" aria-label="last" aria-describedby="basic-addon1" value={{last}} required #lasts>
+
+    <input type="text" class="form-control" placeholder="mail" aria-label="mail" aria-describedby="basic-addon1" value='{{mail}}' required #mails>
+
+    <input type="text" class="form-control" placeholder="phone" aria-label="phone" aria-describedby="basic-addon1" value={{phone}} required #phones>
+
+    <textarea class="form-control" aria-label="extra" value={{extra}} #extras></textarea>  
+
+    <button type="button" class="btn btn-secondary" (click)="myFunction()" >Close</button>
+    &nbsp;
+
+    <button type="button" class="btn btn-primary" (click)="updateCard(firsts, lasts, phones, mails, extras)">Save changes</button>
+
+</div>
