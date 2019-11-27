@@ -17,6 +17,7 @@ Able to take a picture and get the content, such as firstname, lastname, email a
 	valid formats for phone number: 123-456-7890
 
 Helpfull website: 
+
 	1. https://github.com/basst314/ngx-webcam
 
 	2. https://github.com/Chandler-Gegg/base-sixty-four
