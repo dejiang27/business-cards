@@ -18,6 +18,9 @@ Able to take a picture and get the content, such as firstname, lastname, email a
 
 Helpfull website: 
 	1. https://github.com/basst314/ngx-webcam
+
 	2. https://github.com/Chandler-Gegg/base-sixty-four
+	
 	3. https://bootsnipp.com/
+	
 	4. https://firebase.google.com/docs/firestore/query-data/get-data
