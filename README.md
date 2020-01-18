@@ -1,7 +1,5 @@
 # business-cards
 
-Dejiang Chen
-
 Github URL: https://github.com/dejiang27/business-cards
 
 Final Project URL: https://business-cards-e17b8.firebaseapp.com/
